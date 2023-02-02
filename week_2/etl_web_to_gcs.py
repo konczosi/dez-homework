@@ -35,7 +35,7 @@ def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
 def write_gcs(path: Path) -> None:
     """Upload local parquet to GCS"""
     gpc_block = GcsBucket.load("dez-gcs")
-    gpc_block.upload_from_path(from_path=f"{path}", to_path=path)
+    gpc_block.upload_from_path(from_path=f"/tmp/prefect/{path}", to_path=path)
 
 
 @flow()
