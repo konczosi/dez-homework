@@ -1,0 +1,2 @@
+# crontab file with ommited file path
+0 5 1 * * python flows/02_gpc/etl_web_to_gcs.py
